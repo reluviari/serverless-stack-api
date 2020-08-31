@@ -2,8 +2,7 @@
 
 # $ serverless deploy --stage dev --aws-profile devAccount
 
-# CÓPIA DE$ serverless deploy --stage dev --aws-profile devAccount
-# Aqui, prodAccounte devAccountestão os perfis da AWS para o ambiente de produção e preparação, respectivamente.
+# Aqui, prodAccount e devAccount estão os perfis da AWS para o ambiente de produção e preparação, respectivamente.
 
 # Para simplificar este processo, você pode adicionar os perfis ao seu serverless.yml. Portanto, você não precisa especificá-los em seus serverless deploycomandos.
 
@@ -22,17 +21,23 @@ provider:
 
 # Há algumas coisas acontecendo aqui.
 
-# Primeiro definimos custom.myStagecomo ${opt:stage, self:provider.stage}. Isso indica ao Serverless Framework para usar o valor da --stageopção CLI, se houver. Caso contrário, use o estágio padrão especificado em provider.stage.
-# Também definimos custom.myProfile, que contém os perfis AWS que queremos usar para implantar em cada estágio. Assim como antes, queremos usar o prodAccountperfil se estivermos implantando no estágio prode o devAccountperfil se estivermos implantando no estágio dev.
-# Finalmente, definimos o provider.profilepara ${self:custom.myProfile.${self:custom.myStage}}. Isso escolhe o valor do nosso perfil dependendo do estágio atual definido em custom.myStage.
-# Usamos o conceito de variáveis ​​no Serverless Framework neste exemplo. Você pode ler mais sobre isso no capítulo sobre Variáveis ​​de ambiente sem servidor .
+# Primeiro definimos custom.myStage como ${opt:stage, self:provider.stage}. Isso indica ao Serverless Framework para usar o valor da --stage opção CLI, se houver. 
+# Caso contrário, use o estágio padrão especificado em provider.stage.
 
-# Agora, quando você implanta para produção, o Serverless Framework vai usar o prodAccountperfil. E os recursos serão provisionados dentro prodAccountda conta AWS do usuário do perfil.
+# Também definimos custom.myProfile, que contém os perfis AWS que queremos usar para implantar em cada estágio. 
+# Assim como antes, queremos usar o perfil prodAccount se estivermos implantando na stage de prod e o devAccount perfil se estivermos implantando no estágio dev.
+
+# Finalmente, definimos o provider.profile para ${self:custom.myProfile.${self:custom.myStage}}. 
+# Isso escolhe o valor do nosso perfil dependendo do estágio atual definido em custom.myStage.
+
+# Usamos o conceito de variáveis ​​no Serverless Framework neste exemplo.
+
+# Agora, quando você implanta para produção, o Serverless Framework vai usar o perfil prodAccount. E os recursos serão provisionados dentro prodAccount da conta AWS.
 
 # $ serverless deploy --stage prod
 
-# E quando você implanta para o teste, o mesmo conjunto exato de recursos da AWS será provisionado dentro devAccountda conta da AWS do usuário do perfil.
+# E quando você implanta para o teste, o mesmo conjunto exato de recursos da AWS será provisionado dentro devAccount da conta da AWS.
 
 # $ serverless deploy --stage dev
 
-# Observe que não precisamos definir a --aws-profileopção. E é isso, deve dar a você um bom entendimento de como trabalhar com vários perfis e credenciais da AWS.
+# Observe que não precisamos definir a opção --aws-profile.

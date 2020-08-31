@@ -1,0 +1,10 @@
+{
+    "pathParameters": {
+        "id": "8604f090-ebda-11ea-8dab-752e3cf9b83c"
+    },
+    "requestContext": {
+        "identity": {
+        "cognitoIdentityId": "USER-DEFAULT-APP-NOTES"
+        }
+    }
+}
