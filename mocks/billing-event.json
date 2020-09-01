@@ -1,0 +1,8 @@
+{
+    "body": "{\"source\":\"tok_mastercard\",\"storage\":25}",
+    "requestContext": {
+        "identity": {
+            "cognitoIdentityId": "USER-DEFAULT-APP-NOTES"
+        }
+    }
+}
