@@ -1,25 +1,24 @@
-Serverless: Stack update finished...
 Service Information
 service: notes-app-reluviaris-api
-stage: dev
+stage: prod
 region: us-east-1
-stack: notes-app-reluviaris-api-dev
+stack: notes-app-reluviaris-api-prod
 resources: 43
 api keys:
   None
 endpoints:
-  POST - https://7t9avn35m3.execute-api.us-east-1.amazonaws.com/dev/notes
-  GET - https://7t9avn35m3.execute-api.us-east-1.amazonaws.com/dev/notes/{id}
-  GET - https://7t9avn35m3.execute-api.us-east-1.amazonaws.com/dev/notes
-  PUT - https://7t9avn35m3.execute-api.us-east-1.amazonaws.com/dev/notes/{id}
-  DELETE - https://7t9avn35m3.execute-api.us-east-1.amazonaws.com/dev/notes/{id}
-  POST - https://7t9avn35m3.execute-api.us-east-1.amazonaws.com/dev/billing
+  POST - https://0ppntpbez9.execute-api.us-east-1.amazonaws.com/prod/notes
+  GET - https://0ppntpbez9.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+  GET - https://0ppntpbez9.execute-api.us-east-1.amazonaws.com/prod/notes
+  PUT - https://0ppntpbez9.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+  DELETE - https://0ppntpbez9.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+  POST - https://0ppntpbez9.execute-api.us-east-1.amazonaws.com/prod/billing
 functions:
-  create: notes-app-reluviaris-api-dev-create
-  get: notes-app-reluviaris-api-dev-get
-  list: notes-app-reluviaris-api-dev-list
-  update: notes-app-reluviaris-api-dev-update
-  delete: notes-app-reluviaris-api-dev-delete
-  billing: notes-app-reluviaris-api-dev-billing
+  create: notes-app-reluviaris-api-prod-create
+  get: notes-app-reluviaris-api-prod-get
+  list: notes-app-reluviaris-api-prod-list
+  update: notes-app-reluviaris-api-prod-update
+  delete: notes-app-reluviaris-api-prod-delete
+  billing: notes-app-reluviaris-api-prod-billing
 layers:
   None
