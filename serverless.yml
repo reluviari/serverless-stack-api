@@ -12,7 +12,7 @@ plugins:
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: prod
+  stage: dev
   profile: notes-app-reluviaris
   region: us-east-1
 
