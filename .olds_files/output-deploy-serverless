@@ -22,3 +22,12 @@ functions:
   billing: notes-app-reluviaris-api-prod-billing
 layers:
   None
+
+
+
+ID do grupo de identidades:
+us-east-1:cbee2412-7155-4984-be2a-e7e6093129ef
+
+Testando a api endpoint:
+
+npx aws-api-gateway-cli-test --username='reluviari@gmail.com' --password='KKopee3443@' --user-pool-id='us-east-1_XZ1FG1YYg' --app-client-id='26ttv949ju2m9r3aekku43evtp' --cognito-region='us-east-1' --identity-pool-id='us-east-1:cbee2412-7155-4984-be2a-e7e6093129ef' --invoke-url='https://0ppntpbez9.execute-api.us-east-1.amazonaws.com/prod' --api-gateway-region='us-east-1' --path-template='/notes' --method='POST' --body='{"content":"hello world","attachment":"hello.jpg"}'
